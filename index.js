@@ -2,6 +2,7 @@ const sumFunc = (init=0, ...args) => {
   for (let arg of args) {
     init = init + arg;
   }
+
   return init;
 };
 
@@ -9,6 +10,7 @@ const diffFunc = (init=0, ...args) => {
   for (let arg of args) {
     init = arg - init;
   }
+
   return init;
 };
 
@@ -16,6 +18,15 @@ const multFunc = (init=0, ...args) => {
   for (let arg of args) {
     init = arg * init;
   }
+
+  return init;
+};
+
+const divFunc = (init=0, ...args) => {
+  for (let arg of args) {
+    init = arg / init;
+  }
+
   return init;
 };
 
@@ -27,4 +38,4 @@ const calculator = (operation, ...args) => {
   return operation(...args);
 };
 
-console.log( calculator(expoFunc, 3, 2) );
+console.log( calculator(divFunc, 3, 4) );
